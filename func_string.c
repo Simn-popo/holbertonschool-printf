@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * print_string - print a string of charactere
@@ -7,12 +7,12 @@
  * Return: number of printed characters
  */
 
-int print_string(char*s)
+int print_string(char *s)
 {
 	int i = 0;
 	int sum = 0;
 
-	if (s!= NULL)
+	if (s != NULL)
 	{
 		while (s[i])
 		{
