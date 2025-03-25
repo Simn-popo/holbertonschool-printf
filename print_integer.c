@@ -2,31 +2,32 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
-/**print_integer Prints an integer to stdout
- * @n : The integer to print 
- * Return : Number of integer printed 
+/**
+ *print_integer - function that prints negative and positive integers
+ *@n : The integer to print
+ * Return: Numbers of integers printed
  */
 
- int print_integer(int n)
+int print_integer(int n)
 {
-    int count = 0;
-    unsigned int num;
+	int count = 0;
+	unsigned int num;
 
-    if (n < 0)
-    {
-        _putchar ('-');
-        count++;
-        num = -n; 
-    }
-    else 
-    num = n; 
+	if (n < 0)
+	{
+		_putchar ('-');
+		count++;
+		num = -n;
+	}
+	else
+		num = n;
 
-    if (num /10)
-    count += print_integer(num / 10);
+	if (num / 10)
+		count += print_integer(num / 10);
 
-    _putchar((num % 10) + '0');
-    count++;
+	_putchar((num % 10) + '0');
+	count++;
 
-    Return (count);
+Return: (count);
 
 }
