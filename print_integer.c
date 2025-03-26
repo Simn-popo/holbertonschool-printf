@@ -8,7 +8,7 @@
  * Return: Number of digits printed
  */
 
-int print_integer(va_list args)
+int print_integer(int n)
 {
 	int count = 0;
 	unsigned int num;
