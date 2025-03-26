@@ -7,10 +7,11 @@
  * Return: number of printed characters
  */
 
-int print_string(char *s)
+int print_string(va_list args)
 {
-	int i = 0;
+	char *s = va_arg(args, char *);
 	int sum = 0;
+	int i = 0;
 
 	if (s != NULL)
 	{

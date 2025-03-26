@@ -1,6 +1,3 @@
-#include "main.h"
-#include <stdlib.h>
-
 /**
  * _printf - Fonction that prints simple string or follow conversion specifiers
  *	%c : specifier that prints a single character
@@ -34,7 +31,7 @@ int _printf(const char *format, ...)
 			len += get_specifier(format[x + 1], args);
 			x++;
 		}
-		
+
 		else
 		{
 			_putchar(format[x]);
