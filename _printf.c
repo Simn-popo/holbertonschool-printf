@@ -14,7 +14,7 @@ int _printf(const char *format, ...)
     int x;
     va_list args;
 
-    /* Array of supported specifiers and their corresponding functions */
+   
     specifier_t specifiers[] = {
         {'c', print_char},
         {'s', print_string},
@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
     if (format == NULL)
         return (-1);
 
-    /* Loop through the format string */
+    
     for (x = 0; format[x] != '\0'; x++)
     {
         if (format[x] == '%')
@@ -46,12 +46,12 @@ int _printf(const char *format, ...)
                     break;
                 }
             }
-            /* If no specifier found, print the '%' character */
+            
             if (!specifier_found)
             {
                 len += _putchar(format[x]);
             }
-            x++;  /* Skip the specifier */
+            x++;  
         }
         else
         {
