@@ -25,6 +25,12 @@ int get_specifier(char specifier, va_list args)
 		{
 			return(op[i].func(args));
 		}
+		_putchar('%');
+		if (specifier != '%')
+		{
+			_putchar(specifier);
+			return (2);
+		}
 	}
 	return (1);
 }
