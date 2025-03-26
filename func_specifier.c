@@ -10,6 +10,7 @@
 
 int get_specifier(char specifier, va_list args)
 {
+	int i = 0;
 
 	op_t op[] = {
 		{"c", print_char},
@@ -19,11 +20,13 @@ int get_specifier(char specifier, va_list args)
 		{"i", print_integer},
 		{NULL, NULL}
 	};
-	for (int i = 0; op[i].specifier != NULL; i++)
+
+	for (i = 0; op[i].specifier != NULL; i++)
 	{
 		if (op[i].specifier[0] == specifier)
 		{
 			return(op[i].func(args));
 		}
 	}
+	return (1);
 }
