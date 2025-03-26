@@ -10,7 +10,6 @@
 
 int get_specifier(char specifier, va_list args)
 {
-	int i = 0;
 
 	op_t op[] = {
 		{"c", print_char},
