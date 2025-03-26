@@ -1,14 +1,13 @@
 #include "main.h"
 
 /**
- * print_percent - print character '%'
- * @c: % to print
- * Return: print charactere
+ * print_modulo - Fonction that print a modulo character
+ * @args: a the list set in _printf function
+ * Return: length the modulo and a modulo
  */
 
-int print_percent(va_list args)
+int print_modulo(va_list args)
 {
 	(void)args;
-	_putchar('%');
-	return (1);
+	return (_putchar('%'));
 }

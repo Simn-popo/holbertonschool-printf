@@ -1,34 +1,27 @@
 #include "main.h"
 
 /**
- * print_string - Prints a string of characters
- * @args: The argument list containing the string
- *
- * Return: The number of characters printed
+ * print_str - Fonction that prints string using the args list
+ * @args: a the list set in _printf function
+ * Return: length of the intelength of the string printed
  */
-<<<<<<< HEAD
 
-int print_string(va_list args)
+int print_str(va_list args)
 {
-	char *s = va_arg(args, char *);
-	int sum = 0;
-	int i = 0;
-=======
-int print_string(va_list args)
-{
-    char *s = va_arg(args, char *);
-    int count = 0;
->>>>>>> f4f01afc6e36518fe5a2981e5ad2100e4e372f0c
+	int len = 0;
 
-    if (s == NULL)
-        s = "(null)";  /* Handle NULL strings */
+	char *str = va_arg(args, char *);
 
-    while (*s)
-    {
-        _putchar(*s);
-        s++;
-        count++;
-    }
-
-    return (count);
+	if (str == NULL)
+	{
+		str = "(null)";
+	}
+	/** check if str is null and print ("null") */
+	while (*str)
+	{
+		_putchar(*str);
+		str++;
+		len++;
+	}
+	return (len);
 }
