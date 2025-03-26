@@ -6,7 +6,7 @@
  * Return: print charactere
  */
 
-int print_percent(char c)
+int print_percent(va_list args)
 {
 	_putchar('%');
 	return (1);
