@@ -11,7 +11,7 @@ int print_char(va_list args);
 int print_str(va_list args);
 int print_modulo(va_list args);
 int print_integer(va_list args);
-int get_specifier(const char format, va_list args);
+int print_specifier(const char format, va_list args);
 
 /**
  * struct spe - a structure that check specifier
