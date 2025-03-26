@@ -1,29 +1,36 @@
-#ifndef MAIN_H
-#define MAIN_H
-
-#include <stdarg.h>
+#include "main.h"
 #include <stddef.h>
-#include <unistd.h>
-
-char _putchar(char character);
-int _printf(const char *format, ...);
-int print_char(va_list args);
-int print_str(va_list args);
-int print_percent(va_list args);
-int print_integer(va_list args);
-int print_specifier(const char format, va_list args);
 
 /**
- * struct spe - a structure that check specifier
- * @specifier: the character of the specifier
- * @f: a pointer function pointing to _printf
+ * get_specifier - returns a function corresponding to a specifier
+ * @specifier: format specifier
+ * @args: list arguments
+ * Return: pointer corresponding to the function or null 
  */
 
-typedef struct spe
+int get_specifier(char specifier, va_list args)
 {
-	char specifier;
-	int (*f)(va_list);
+	int i = 0;
 
-} specifier_t;
+	op_t op[] = {
+		{"c", print_char},
+		{"s", print_string},
+		{"%", print_percent},
+		{NULL, NULL}
+	};
 
-#endif
+	for (i = 0; op[i].specifier != NULL; i++)
+	{
+		if (op[i].specifier[0] == specifier)
+		{
+			return(op[i].func(args));
+		}
+		_putchar('%');
+		if (specifier != '%')
+		{
+			_putchar(specifier);
+			return (2);
+		}
+	}
+	return (1);
+}

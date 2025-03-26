@@ -16,6 +16,8 @@ int get_specifier(char specifier, va_list args)
 		{"c", print_char},
 		{"s", print_string},
 		{"%", print_percent},
+		{"d", print_integer},
+		{"i", print_integer},
 		{NULL, NULL}
 	};
 
@@ -24,12 +26,6 @@ int get_specifier(char specifier, va_list args)
 		if (op[i].specifier[0] == specifier)
 		{
 			return(op[i].func(args));
-		}
-		_putchar('%');
-		if (specifier != '%')
-		{
-			_putchar(specifier);
-			return (2);
 		}
 	}
 	return (1);

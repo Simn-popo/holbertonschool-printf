@@ -1,27 +1,25 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
- * print_str - Fonction that prints string using the args list
- * @args: a the list set in _printf function
- * Return: length of the intelength of the string printed
+ * print_string - print a string of charactere
+ * @s: string to print
+ * Return: number of printed characters
  */
 
-int print_str(va_list args)
+int print_string(int i, va_list args)
 {
-	int len = 0;
+	char *s = va_arg(args, char *);
+	int sum = 0;
 
-	char *str = va_arg(args, char *);
-
-	if (str == NULL)
+	if (s != NULL)
 	{
-		str = "(null)";
+		while (s[i])
+		{
+			_putchar(s[i]);
+			sum++;
+			i++;
+		}
 	}
-	/** check if str is null and print ("null") */
-	while (*str)
-	{
-		_putchar(*str);
-		str++;
-		len++;
-	}
-	return (len);
+	return (sum);
 }

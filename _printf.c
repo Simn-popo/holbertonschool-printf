@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
 
 /**
  * _printf - Fonction that prints simple string or follow conversion specifiers
