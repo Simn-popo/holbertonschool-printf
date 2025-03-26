@@ -8,11 +8,11 @@
  * Return: pointer corresponding to the function or null 
  */
 
-int get_specifier(char specifier, va_list agrs)
+int get_specifier(char specifier, va_list args)
 {
 	int i = 0;
 
-	op_t ops[] = {
+	op_t op[] = {
 		{"c", print_char},
 		{"s", print_string},
 		{"%", print_percent},
@@ -20,7 +20,11 @@ int get_specifier(char specifier, va_list agrs)
 		{"i", print_integer},
 		{NULL, NULL}
 	};
-	
+	for (int i = 0; op[i].specifier != NULL; i++)
+	{
+		if (op[i].specifier[0] == specifier)
+		{
+			return(op[i].func(args));
+		}
 	}
-	return (0);
 }
