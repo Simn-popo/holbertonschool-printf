@@ -3,12 +3,12 @@
 #include <stdlib.h>
 
 /**
- *print_integer - function that prints negative and positive integers
- *@n : The integer to print
- * Return: Numbers of integers printed
+ * print_integer - function that prints negative and positive integers
+ * @n : The integer to print
+ * Return: Number of digits printed
  */
 
-int print_integer(int n)
+int print_integer(va_list args)
 {
 	int count = 0;
 	unsigned int num;
