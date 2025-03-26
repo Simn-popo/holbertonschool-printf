@@ -16,8 +16,6 @@ int get_specifier(char specifier, va_list args)
 		{"c", print_char},
 		{"s", print_string},
 		{"%", print_percent},
-		{"d", print_integer},
-		{"i", print_integer},
 		{NULL, NULL}
 	};
 
