@@ -7,7 +7,7 @@
  * Return: charatere(s) whitout the null byte
  */
 
-int print_char(char c)
+int print_char(va_list args)
 {
 	_putchar(c);
 	return (1);
