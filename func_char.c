@@ -2,14 +2,15 @@
 #include <stdlib.h>
 
 /**
- * print_char - print a charactere to stdout
- * @c: charactere to print
+ * _char - print a charactere to stdout
+ * @args: charactere to print
  * Return: charatere(s) whitout the null byte
  */
 
 int _char(va_list args)
 {
 	char c = va_arg(args, int);
-	_putchar(c);
+
+	_putchar (c);
 	return (1);
 }
