@@ -26,7 +26,7 @@ int _printf(const char *format, ...)
 		{
 			if (format[i + 1] != '\0')
 			{
-				sum += _format(format[i + 1], args);
+				sum += get_specifier(format[i + 1], args);
 				i++;
 			}
 			else
