@@ -16,7 +16,7 @@ int _integer(va_list args)
 
 	if (num < 0)
 	{
-		_putchar('-');
+		count += _putchar('-');
 		num *= -1;
 
 	}
