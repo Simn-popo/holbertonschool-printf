@@ -21,7 +21,7 @@ int get_specifier(char specifier, va_list args)
 		{NULL, NULL}
 	};
 
-	for (i = 0; op[i].specifier != NULL; i++)
+	 (i = 0; op[i].specifier != NULL; i++)
 	{
 		if (op[i].specifier[0] == specifier)
 		{
