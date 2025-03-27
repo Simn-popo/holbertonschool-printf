@@ -16,8 +16,8 @@ int get_specifier(const char s, va_list args)
 		{'c', _char},
 		{'s', _string},
 		{'%', _percent},
-		/*{'d', _integer},*/
-		/*{'i', _integer},*/
+		{'d', _integer},
+		{'i', _integer},
 		{'\0', NULL}
 	};
 	while (type[i].specifier)

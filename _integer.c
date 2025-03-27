@@ -1,46 +1,40 @@
 #include "main.h"
 
 /**
- * print_int - Prints an integer to stdout
+ * _integer - Prints an integer to stdout
  * @ap: Argument list containing the integer to print
  *
  * Return: The number of characters printed
  */
 
-int print_int(va_list ap)
+int _integer(va_list args)
 {
-	int num = va_arg(ap, int);
+	int num = va_arg(args, int);
 	int count = 0;
-	int divisor = 1, digit;
-	int temp = num;
+	int divisor;
+	int multiplication = 1;
 
 	if (num < 0)
 	{
 		_putchar('-');
-		num = -num;
-		count++;
-	}
+		num *= -1;
 
-	if (num == 0)
-	{
-		_putchar('0');
-		return count + 1;
 	}
-
-	while (temp / 10 != 0)
-	{
-		divisor *= 10;
-		temp /= 10;
-	}
-
-	while (divisor > 0)
-	{
-		digit = num / divisor;
-		_putchar(digit + '0');
-		num %= divisor;
-		divisor /= 10;
-		count++;
-	}
-
-	return count;
+	if (num < 10)
+{
+		return (count += _putchar(num + '0'));
 }
+				divisor = num; 
+				while (divisor > 9)
+				{	
+				multiplication *= 10;
+				divisor /= 10;
+				}
+				while (multiplication >= 1)
+				{	
+				count += _putchar (((num /multiplication) %10) + '0');
+				multiplication /= 10;
+				}
+
+				return (count);
+				}
