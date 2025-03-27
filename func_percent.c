@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print_percent - print character '%'
- * @c: % to print
+ * _percent - print character '%'
+ * @args: list arg %
  * Return: print charactere
  */
 
