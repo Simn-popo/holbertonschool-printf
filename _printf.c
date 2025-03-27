@@ -1,45 +1,45 @@
 #include "main.h"
 
 /**
- * _printf - Fonction that prints simple string or follow conversion specifiers
- *	%c : specifier that prints a single character
- *	%s : specifier that prints a string of characters
- *	%% : specifier that prints a modulo
- *	%d : specifier that prints a decimal base 10 number
- *	%i : specifier that prints an integer base 10
- * @format: number of arguments in the array
- * Return: the number of character printed if success, or -1 if failed
+ * _printf - print a string into a formatted output
+ * @format: an array of character string
+ *
+ * Return: the sum of printed characters
  */
 
 int _printf(const char *format, ...)
 {
-	int x, len = 0;
+	int i = 0, sum = 0;
 	va_list args;
+
+	if (!format || (format[0] == '%' && !format[1]))
+		return (-1);
+
+	if (format[0] == '%' && format[1] == ' ' && !format[2])
+		return (-1);
 
 	va_start(args, format);
 
-	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+	for (i = 0; format[i] != '\0'; i++)
 	{
-		return (-1);
-	}
-	if (format[0] == '%' && format[1] == ' ' && format[2] == '\0')
-	{
-		return (-1);
-	}
-	for (x = 0; format[x] != '\0' ; x++)
-	{
-		if (format[x] == '%')
+		if (format[i] == '%')
 		{
-			len += get_specifier(format[x + 1], args);
-			x++;
+			if (format[i + 1] != '\0')
+			{
+				sum += _format(format[i + 1], args);
+				i++;
+			}
+			else
+				return (-1);
 		}
-		
 		else
 		{
-			_putchar(format[x]);
-			len++;
+			_putchar(format[i]);
+			sum++;
 		}
 	}
+
 	va_end(args);
-	return (len);
+	return (sum);
+
 }
