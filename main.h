@@ -19,7 +19,7 @@ typedef struct types
 	int (*f)(va_list);
 } types_t;
 
-int get_specifier(const char specifier, va_list args);
+int get_specifier(const char s, va_list args);
 int _percent(va_list args);
 int _putchar(char c);
 int _char(va_list args);
