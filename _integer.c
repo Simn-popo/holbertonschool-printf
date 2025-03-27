@@ -2,7 +2,7 @@
 
 /**
  * _integer - Prints an integer to stdout
- * @ap: Argument list containing the integer to print
+ * @args: Argument list containing the integer to print
  *
  * Return: The number of characters printed
  */
@@ -24,15 +24,15 @@ int _integer(va_list args)
 {
 		return (count += _putchar(num + '0'));
 }
-				divisor = num; 
+				divisor = num;
 				while (divisor > 9)
-				{	
+				{
 				multiplication *= 10;
 				divisor /= 10;
 				}
 				while (multiplication >= 1)
-				{	
-				count += _putchar (((num /multiplication) %10) + '0');
+				{
+				count += _putchar (((num / multiplication) % 10) + '0');
 				multiplication /= 10;
 				}
 
