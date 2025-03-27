@@ -1,36 +1,31 @@
-#include "main.h"
-#include <stddef.h>
+#ifndef MAIN_H
+#define MAIN_H
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <stdarg.h>
+#include <stdint.h>
 
 /**
- * get_specifier - returns a function corresponding to a specifier
- * @specifier: format specifier
- * @args: list arguments
- * Return: pointer corresponding to the function or null 
- */
-
-int get_specifier(char specifier, va_list args)
+  * struct types - specifiers characters and their associated functions.
+  *
+  * @specifier: A specifier character associated to a data type.
+  * @f: A function pointer that process data type specified by `types`.
+  */
+typedef struct types
 {
-	int i = 0;
+	char specifier;
+	int (*f)(va_list);
+} types_t;
 
-	op_t op[] = {
-		{"c", print_char},
-		{"s", print_string},
-		{"%", print_percent},
-		{NULL, NULL}
-	};
+int _format(const char specifier, va_list args);
+int _percent(va_list args);
+int _putchar(char c);
+int _char(va_list args);
+int _string(va_list args);
+int _printf(const char *format, ...);
+int _int(va_list args);
 
-	for (i = 0; op[i].specifier != NULL; i++)
-	{
-		if (op[i].specifier[0] == specifier)
-		{
-			return(op[i].func(args));
-		}
-		_putchar('%');
-		if (specifier != '%')
-		{
-			_putchar(specifier);
-			return (2);
-		}
-	}
-	return (1);
-}
+
+#endif
