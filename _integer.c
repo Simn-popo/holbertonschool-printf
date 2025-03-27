@@ -9,8 +9,8 @@
 
 int _integer(va_list args)
 {
-	int num = va_arg(args, int);
-	long int count = 0;
+	long int num = va_arg(args, int);
+	int count = 0;
 	long int divisor;
 	int multiplication = 1;
 
