@@ -8,7 +8,7 @@
  * Return: pointer corresponding to the function or null
  */
 
-int get_specifier(char s, va_list args)
+int get_specifier(const char s, va_list args)
 {
 	int i = 0;
 
@@ -16,13 +16,13 @@ int get_specifier(char s, va_list args)
 		{'c', _char},
 		{'s', _string},
 		{'%', _percent},
-		{'d', _int},
-		{'i', _int},
+		/*{'d', _integer},*/
+		/*{'i', _integer},*/
 		{'\0', NULL}
 	};
 	while (type[i].specifier)
 	{
-		if (s == type[i].f)
+		if (type[i].specifier == s)
 		{
 			return (type[i].f(args));
 		}
