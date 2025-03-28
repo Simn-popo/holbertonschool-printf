@@ -50,10 +50,6 @@ Your code should use the Betty style ✍️. It will be checked using betty-styl
 
 • write (man 2 write) 🖊️
 
-• malloc (man 3 malloc) 🏗️
-
-• free (man 3 free) 🪙
-
 • va_start (man 3 va_start) 🚦
 
 • va_end (man 3 va_end) 🏁
@@ -66,13 +62,11 @@ Your code should use the Betty style ✍️. It will be checked using betty-styl
 
 
 int _putchar(char c); 🎯
-• int _printf(const char *format, ...); 🖨️
-• int specifier(char c, va_list args); 🔍
-• int (*get_op_function(char specifier))(va_list); 🛠️
-• int print_char(va_list args); 🔡
-• int print_string(va_list args); 📝
-• int print_percent(va_list args); 🎯
-• int print_percent(va_list args); ♻️
+• int _printf.c(const char *format, ...); 🖨️
+• int func_specifier.c(char c, va_list args); 🔍
+• int func_char.c(va_list args); 🔡
+• int func_string.c(va_list args); 📝
+• int func_percent.c(va_list args); 🎯
 • int print_integer(va_list args); 🔢
 
 # File description 
@@ -81,11 +75,8 @@ int _putchar(char c); 🎯
 
 • _putchar - Outputs the character c to stdout ✍️.
 
-• get_op_function - Returns a function linked to a specifier 🔎.
+• func_specifier.c - Returns a function linked to a specifier 🔎.
 
-• op_functions.c - Houses functions like print_char, print_str, and print_pct to handle character, string, and % output 🗣️.
-
-• struct op(main.h) - Structure that links a specifier to its respective function 🔗.
 
 # Flowchart
 ![image](https://github.com/user-attachments/assets/ca036a22-8553-44a1-8b79-27dffd55305f)
