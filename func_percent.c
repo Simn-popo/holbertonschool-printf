@@ -8,7 +8,7 @@
 
 int _percent(va_list args)
 {
-	(void)args;
+	(void)args;/* cancel the usage of args in function*/
 	_putchar('%');
 	return (1);
 }
