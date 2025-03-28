@@ -70,19 +70,19 @@ Your code should use the Betty style ✍️. It will be checked using betty-styl
 # Function prototypes 
 
 
-• int _putchar(char c); 🎯
+int get_specifier(const char s, va_list args);
 
-• int _printf.c(const char *format, ...); 🖨️
+int _percent(va_list args);
 
-• int func_specifier.c(char c, va_list args); 🔍
+int _putchar(char c);
 
-• int func_char.c(va_list args); 🔡
+int _char(va_list args);
 
-• int func_string.c(va_list args); 📝
+int _string(va_list args);
 
-• int func_percent.c(va_list args); 🎯
+int _printf(const char *format, ...);
 
-• int print_integer(va_list args); 🔢
+int _integer(va_list args);
 
 # File description 
 
