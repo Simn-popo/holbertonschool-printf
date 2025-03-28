@@ -20,15 +20,15 @@ int get_specifier(const char s, va_list args)
 		{'i', _integer},
 		{'\0', NULL}
 	};
-	while (type[i].specifier)
+	while (type[i].specifier)/*looking the character after % for correct format*/
 	{
-		if (type[i].specifier == s)
+		if (type[i].specifier == s)/*same*/
 		{
-			return (type[i].f(args));
+			return (type[i].f(args));/*return the good format*/
 		}
 		i++;
 	}
-	_putchar('%');
+	_putchar('%');/*script that return modulo*/
 	if (s != '%')
 	{
 		_putchar(s);
