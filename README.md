@@ -44,7 +44,7 @@ Your code should use the Betty style ✍️. It will be checked using betty-styl
 
 ![Screenshot 2025-03-28 123953](https://github.com/user-attachments/assets/89288894-dd52-4e45-a846-48cfcf2bc089)
 
-# Man page : 
+# Man page
 
 ![image](https://github.com/user-attachments/assets/c78d025c-762d-482d-897c-ee8c841fdfb0)
 
