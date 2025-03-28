@@ -87,7 +87,7 @@ int _putchar(char c); 🎯
 
 • struct op(main.h) - Structure that links a specifier to its respective function 🔗.
 
-# flowchart
+# Flowchart
 ![image](https://github.com/user-attachments/assets/ca036a22-8553-44a1-8b79-27dffd55305f)
 
 
