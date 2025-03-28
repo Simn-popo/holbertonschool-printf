@@ -52,7 +52,7 @@ Your code should use the Betty style ✍️. It will be checked using betty-styl
 
 # Authorized functions and Macros  
 
-•
+
     write (man 2 write)
     
     malloc (man 3 malloc)
@@ -66,6 +66,8 @@ Your code should use the Betty style ✍️. It will be checked using betty-styl
     va_copy (man 3 va_copy)
     
     va_arg (man 3 va_arg)
+
+# Function prototypes 
 
 
 • int _putchar(char c); 🎯
