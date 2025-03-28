@@ -62,11 +62,17 @@ Your code should use the Betty style ✍️. It will be checked using betty-styl
 
 
 int _putchar(char c); 🎯
+
 • int _printf.c(const char *format, ...); 🖨️
+
 • int func_specifier.c(char c, va_list args); 🔍
+
 • int func_char.c(va_list args); 🔡
+
 • int func_string.c(va_list args); 📝
+
 • int func_percent.c(va_list args); 🎯
+
 • int print_integer(va_list args); 🔢
 
 # File description 
