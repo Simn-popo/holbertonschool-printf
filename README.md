@@ -68,7 +68,7 @@ Your code should use the Betty style ✍️. It will be checked using betty-styl
     va_arg (man 3 va_arg)
 
 
-int _putchar(char c); 🎯
+• int _putchar(char c); 🎯
 
 • int _printf.c(const char *format, ...); 🖨️
 
